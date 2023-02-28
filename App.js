@@ -4,8 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Just Do it</Text>
       <StatusBar style="auto" />
+      <Text style={mytextStyle.cobadata}>Sample my ay</Text>
     </View>
   );
 }
@@ -17,4 +18,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+});
+
+const mytextStyle = StyleSheet.create({
+  cobadata: {
+    color: 'red',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 10,
+    
+  }
 });
