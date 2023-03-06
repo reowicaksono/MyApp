@@ -1,13 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+import AppRouters from './routes/PageRouters';
+import AuthRouters from './routes/AuthRouters';
+import AppC from './constants/AppC';
 
 export default function App() {
+  const {isLogin,setLogin} = AppC();
   return (
-    <View style={styles.container}>
-      <Text>Just Do it</Text>
-      <StatusBar style="auto" />
-      <Text style={mytextStyle.cobadata}>Sample my ay</Text>
-    </View>
+    <NavigationContainer>
+      {isLogin ? <AppRouters /> : <AuthRouters />}
+    </NavigationContainer>
   );
 }
 
